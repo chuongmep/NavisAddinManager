@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RibbonControl
+    xmlns="clr-namespace:Autodesk.Windows;assembly=AdWindows"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:nvw="clr-namespace:Autodesk.Navisworks.Gui.Roamer.AIRLook;assembly=navisworks.gui.roamer"
+    x:Uid="UID_NavisAddinManage_RIBBON_CONTROL">
+    <RibbonTab Title="AddinManager" Id="ID_AddinManager_TAB">
+        <RibbonPanel x:Uid="UID_NavisAddinManager_PANEL">
+            <RibbonPanelSource x:Uid="UID_NavisAddinManage_TAB_AddinManager_SOURCE" Title="AddinManager">
+                <nvw:NWRibbonButton
+                    x:Uid="UID_ButtonAddinManagerManual"
+                    Id="ID_ButtonAddinManagerManual"
+                    KeyTip="X1"
+                    Orientation="Vertical"
+                    ShowText="True"
+                    Size="Large" />
+                <nvw:NWRibbonButton
+                    x:Uid="UID_ButtonAddinManagerFaceless"
+                    Id="ID_ButtonAddinManagerFaceless"
+                    KeyTip="X2"
+                    Orientation="Vertical"
+                    ShowText="True"
+                    Size="Large" />
+            </RibbonPanelSource>
+        </RibbonPanel>
+    </RibbonTab>
+</RibbonControl>

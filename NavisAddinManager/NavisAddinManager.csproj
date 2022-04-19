@@ -1,0 +1,127 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <UseWPF>true</UseWPF>
+    <LangVersion>latest</LangVersion>
+    <PlatformTarget>x64</PlatformTarget>
+    <ImplicitUsings>true</ImplicitUsings>
+    <UseWindowsForms>false</UseWindowsForms>
+    <TargetFramework>net48</TargetFramework>
+    <Configurations>Debug N22;Debug N23</Configurations>
+    <Configurations>$(Configurations);Release N20;Release N21;Release N22;Release N23</Configurations>
+    <RootNamespace>NavisAddinManager</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(Configuration.Contains('Debug'))">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineConstants>$(DefineConstants);DEBUG</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(Configuration.Contains('Release'))">
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <DefineConstants>$(DefineConstants);RELEASE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(Configuration.Contains('N20'))">
+    <NavisVersion>2020</NavisVersion>
+    <DefineConstants>$(DefineConstants);N20</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(Configuration.Contains('N21'))">
+    <NavisVersion>2021</NavisVersion>
+    <DefineConstants>$(DefineConstants);N21</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(Configuration.Contains('N22'))">
+    <NavisVersion>2022</NavisVersion>
+    <DefineConstants>$(DefineConstants);N22</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(Configuration.Contains('N23'))">
+    <NavisVersion>2023</NavisVersion>
+    <DefineConstants>$(DefineConstants);N23</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Version>$(NavisVersion)</Version>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <Description>A Project Support for developer in Navisworks </Description>
+    <PublishSingleFile>true</PublishSingleFile>
+    <PublishTrimmed>true</PublishTrimmed>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Resources\dev.ico" />
+    <None Remove="Resources\folder.png" />
+    <Page Remove="en-US\AddinManagerRibbon.xaml" />
+    <None Include="en-US\AddinManagerRibbon.xaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\dev16x16.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\dev32x32.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Chuongmep.Navis.Api.Autodesk.Navisworks.Api" Version="$(NavisVersion).*" />
+    <PackageReference Include="Chuongmep.Navis.Api.AdWindows" Version="$(NavisVersion).*" />
+    <PackageReference Include="Chuongmep.Navis.Api.navisworks.gui.roamer" Version="$(NavisVersion).*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\dev.ico" />
+    <Resource Include="Resources\folder.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Update="Resource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="View\AssemblyLoader.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="View\FrmAddInManager.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <PropertyGroup>
+    <PostBuildEvent>powershell -NoProfile -ExecutionPolicy Unrestricted $(SolutionDir)NavisAddinManager\postbuild.ps1 -Configuration '$(Configuration)' -SolutionDir '$(SolutionDir)' -ProjectDir '$(ProjectDir)' -Version '$(NavisVersion)'</PostBuildEvent>
+  </PropertyGroup>
+<!--  <Target Name="CopyFiles" AfterTargets="CoreBuild">-->
+<!--    <ItemGroup>-->
+<!--      <RootItem Include="$(ProjectDir)*.addin" />-->
+<!--      <AddinItem Include="$(TargetDir)$(AssemblyName).*" />-->
+<!--    </ItemGroup>-->
+<!--    <PropertyGroup>-->
+<!--      <RootDir>bin\AddIn $(NavisVersion) $(Configuration)\</RootDir>-->
+<!--      <AddinDir>$(RootDir)$(AssemblyName)\</AddinDir>-->
+<!--    </PropertyGroup>-->
+<!--    <Copy SourceFiles="@(RootItem)" DestinationFolder="$(RootDir)" />-->
+<!--    <Copy SourceFiles="@(AddinItem)" DestinationFolder="$(AddinDir)" />-->
+<!--    <ItemGroup>-->
+<!--      <AddinFiles Include="$(RootDir)**\*.*" />-->
+<!--    </ItemGroup>-->
+<!--    <Copy SourceFiles="@(AddinFiles)" DestinationFolder="C:\Program Files\Autodesk\Navisworks Manage $(NavisVersion)\Plugins\$(TargetName)\" Condition="$(Configuration.Contains('Debug'))" />-->
+<!--  </Target>-->
+
+</Project>
