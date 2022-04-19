@@ -57,6 +57,12 @@
     <None Update="Resources\dev32x32.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Resources\lab16x16.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\lab32x32.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Chuongmep.Navis.Api.Autodesk.Navisworks.Api" Version="$(NavisVersion).*" />
@@ -103,6 +109,10 @@
     <Page Update="View\FrmAddInManager.xaml">
       <SubType>Designer</SubType>
     </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Test\Test.csproj" />
   </ItemGroup>
   <PropertyGroup>
     <PostBuildEvent>powershell -NoProfile -ExecutionPolicy Unrestricted $(SolutionDir)NavisAddinManager\postbuild.ps1 -Configuration '$(Configuration)' -SolutionDir '$(SolutionDir)' -ProjectDir '$(ProjectDir)' -Version '$(NavisVersion)'</PostBuildEvent>

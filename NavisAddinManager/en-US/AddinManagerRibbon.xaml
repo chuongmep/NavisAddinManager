@@ -23,5 +23,16 @@
                     Size="Large" />
             </RibbonPanelSource>
         </RibbonPanel>
+        <RibbonPanel x:Uid="UID_Lab_PANEL">
+            <RibbonPanelSource x:Uid="UID_NavisAddinManage_TAB_Test_SOURCE" Title="Test">
+                <nvw:NWRibbonButton
+                    x:Uid="UID_ButtonTest"
+                    Id="ID_ButtonTest"
+                    KeyTip="X1"
+                    Orientation="Vertical"
+                    ShowText="True"
+                    Size="Large" />
+            </RibbonPanelSource>
+        </RibbonPanel>
     </RibbonTab>
 </RibbonControl>
