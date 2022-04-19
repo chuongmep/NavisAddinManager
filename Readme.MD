@@ -54,6 +54,7 @@ Some feature include:
 
 Please follow last release at section [Release](https://github.com/chuongmep/NavisAddInManager/releases/latest)
 
+Support Navisworks Version : 2020, 2021, 2022, 2023.
 ---
 
 ## Guideline
