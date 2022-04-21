@@ -38,4 +38,30 @@ public partial class FrmAddInManager : Window
         }
         viewModel.MAddinManagerBase.AddinManager.SaveToAimIni();
     }
+
+    private void TreeViewCommand_OnMouseWheel(object sender, MouseWheelEventArgs e)
+    {
+        if (Keyboard.Modifiers != ModifierKeys.Control)
+            return;
+
+        if (e.Delta > 0)
+            ZoomIn();
+
+        else if (e.Delta < 0)
+            ZoomOut();
+    }
+    void ZoomIn()
+    {
+        if (TreeViewCommand.FontSize <= 30)
+        {
+            TreeViewCommand.FontSize += 2f;
+        }
+    }
+    void ZoomOut()
+    {
+        if(TreeViewCommand.FontSize >= 10)
+        {
+            TreeViewCommand.FontSize -= 2f;
+        }
+    }
 }

@@ -95,6 +95,7 @@
                         FontSize="12"
                         ItemsSource="{Binding CommandItems, Mode=TwoWay}"
                         ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                        PreviewMouseWheel="TreeViewCommand_OnMouseWheel"
                         SelectedItem_="{Binding SelectedCommandItem, Mode=TwoWay}">
                         <TreeView.ContextMenu>
                             <ContextMenu>
