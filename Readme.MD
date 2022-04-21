@@ -37,6 +37,7 @@ Some feature include:
     - AddInManager Manual : Use for normal process load/unload addin
     - AddInManager Faceless : use for load last process before addin without UI
 - Allow user know whether plugin can load successfully or not.
+- No depend on any library from outside **Navisworks**.
 
 ## Add-In Manager
 
