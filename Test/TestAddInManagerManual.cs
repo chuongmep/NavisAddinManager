@@ -18,6 +18,15 @@ namespace Test
         
     }
     
+    public class TestDontNeedUseAttClass : AddInPlugin
+    {
+        public override int Execute(params string[] parameters)
+        {
+            MessageBox.Show("Hello World",Application.Title);
+            return 0;
+        }
+    }
+    
     [Plugin("AddinManagerManual", "ChuongMep",DisplayName = "AddinManager Manual", ToolTip = "Addin Manager Manual")]
     [AddInPlugin(AddInLocation.AddIn)]
     public class TestAddInManagerManual : AddInPlugin
