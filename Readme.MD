@@ -47,7 +47,36 @@ Some feature include:
 
 - [x] AddInManagerManual
 - [x] AddInManagerFaceless
+A sample command is shown below:
 
+- Way one : use full with Add-in Manager
+``` csharp
+[Plugin("HelloWorld", "ChuongMep",DisplayName = "HelloWorld", ToolTip = "HelloWorld Navisworks AddinManager")]
+    [AddInPlugin(AddInLocation.AddIn)]
+    public class HelloWorld : AddInPlugin
+    {
+        public override int Execute(params string[] parameters)
+        {
+            MessageBox.Show("Hello World",Application.Title);
+            return 0;
+        }
+    }
+   
+```
+- Way two  : use one quick run with Add-in Manager
+``` csharp
+    /// <summary>
+    /// Only work for in AddinManager
+    /// </summary>
+    public class TestDontNeedUseAttClass : AddInPlugin
+    {
+        public override int Execute(params string[] parameters)
+        {
+            MessageBox.Show("Hello World",Application.Title);
+            return 0;
+        }
+    }
+```
 ---
 
 ## Installation

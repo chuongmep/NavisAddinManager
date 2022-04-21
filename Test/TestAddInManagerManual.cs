@@ -18,6 +18,9 @@ namespace Test
         
     }
     
+    /// <summary>
+    /// Only work for in AddinManager
+    /// </summary>
     public class TestDontNeedUseAttClass : AddInPlugin
     {
         public override int Execute(params string[] parameters)
