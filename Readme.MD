@@ -31,7 +31,7 @@ to support multiple platform API for developer. With current technology, you can
 
 ![](pic/7aF7wDel5L.gif)
 
-Some feature include:
+### Some feature include:
 
 - Add-in manager
     - AddInManager Manual : Use for normal process load/unload addin
