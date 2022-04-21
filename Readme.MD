@@ -47,6 +47,7 @@ Some feature include:
 
 - [x] AddInManagerManual
 - [x] AddInManagerFaceless
+
 A sample command is shown below:
 
 - Way one : use full with Add-in Manager
