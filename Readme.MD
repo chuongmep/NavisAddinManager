@@ -38,7 +38,10 @@ to support multiple platform API for developer. With current technology, you can
     - AddInManager Faceless : use for load last process before addin without UI
 - Allow user know whether plugin can load successfully or not.
 - No depend on any library from outside **Navisworks**.
-
+- <kbd>F5</kbd> - Load fresh plugin don't need load again.
+- <kbd>F1</kbd> - Go link open source report some error,bug or feature request.
+- <kbd>Delete</kbd> - Quick remove by use right click or use from keyboard.
+- <kbd>Crt + MouseWheel</kbd> - Zoom in/out by use mouse wheel in command plugin.
 ## Add-In Manager
 
 ![](pic/AddinManager.png)
