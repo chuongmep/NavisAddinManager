@@ -14,7 +14,6 @@ namespace NavisAddinManager.ViewModel;
 
 public class AddInManagerViewModel : ViewModelBase
 {
-    //public AddInPlugin ExternalCommandData { get; set; }
     public FrmAddInManager FrmAddInManager { get; set; }
     public AssemLoader AssemLoader { get; set; }
 
@@ -90,7 +89,6 @@ public class AddInManagerViewModel : ViewModelBase
     public ICommand OpenLcAssemblyCommand => new RelayCommand(OpenLcAssemblyCommandClick);
     public ICommand ReloadCommand => new RelayCommand(ReloadCommandClick);
     public ICommand FreshSearch => new RelayCommand(FreshSearchClick);
-    public ICommand ExploreCommand => new RelayCommand(ExploreCommandClick);
 
     private string searchText;
 
@@ -446,38 +444,6 @@ public class AddInManagerViewModel : ViewModelBase
         }
     }
     
-    private List<NavisAddin> GetAddinFromFolder(string folder)
-    {
-        var revitAddins = new List<NavisAddin>();
-        if (!Directory.Exists(folder)) return revitAddins;
-        var AddinFilePathsVisible = Directory.GetFiles(folder, "*.*", SearchOption.AllDirectories)
-        .Where(x => x.EndsWith(DefaultSetting.FormatExAddin)).ToArray();
-        foreach (var AddinFilePath in AddinFilePathsVisible)
-        {
-            var revitAddin = new NavisAddin();
-            revitAddin.FilePath = AddinFilePath;
-            revitAddin.Name = Path.GetFileName(AddinFilePath);
-            revitAddin.NameNotEx =
-                revitAddin.Name.Replace(DefaultSetting.FormatExAddin, string.Empty);
-            revitAddin.State = VisibleModel.Enable;
-            revitAddins.Add(revitAddin);
-        }
-        var AddinFilePathsDisable = Directory.GetFiles(folder, "*.*", SearchOption.AllDirectories)
-            .Where(x => x.EndsWith(DefaultSetting.FormatDisable)).ToArray();
-        foreach (var AddinFilePath in AddinFilePathsDisable)
-        {
-            var revitAddin = new NavisAddin();
-            revitAddin.FilePath = AddinFilePath;
-            revitAddin.Name = Path.GetFileName(AddinFilePath);
-            revitAddin.NameNotEx =
-                revitAddin.Name.Replace(DefaultSetting.FormatDisable, string.Empty);
-            revitAddin.State = VisibleModel.Disable;
-            revitAddins.Add(revitAddin);
-        }
-        if (AddinFilePathsVisible.Length == 0) return new List<NavisAddin>();
-        return revitAddins;
-    }
-    
     private void ClearCommandClick()
     {
         var tempFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
@@ -488,34 +454,6 @@ public class AddInManagerViewModel : ViewModelBase
         }
     }
 
-    private void ExploreCommandClick()
-    {
-        const string AdskPath = "Autodesk\\Revit\\Addins";
-        var folderPath = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData);
-        if (IsCurrentVersion)
-        {
-            var folder = Path.Combine(folderPath, AdskPath,
-                Autodesk.Navisworks.Api.Application.Version.Build.ToString());
-            if (Directory.Exists(folder))
-            {
-                var filePaths = Directory.GetFiles(folder).Where(x => x.Contains(DefaultSetting.FileName)).ToArray();
-                if (filePaths.Length == 0)
-                {
-                    MessageBox.Show(FrmAddInManager, "File Empty!", DefaultSetting.AppName, MessageBoxButton.OK, MessageBoxImage.Exclamation);
-                    return;
-                }
-                foreach (var s in filePaths)
-                    Process.Start("explorer.exe", "/select, " + s);
-            }
-        }
-        else
-        {
-            var folder = Path.Combine(folderPath, AdskPath);
-            if (Directory.Exists(folder))
-            {
-                Process.Start(folder);
-            }
-        }
-    }
+    
     
 }
