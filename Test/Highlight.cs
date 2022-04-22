@@ -17,7 +17,7 @@ public class Highlight : AddInPlugin
 
     private void highlight()
     {
-        Document oDoc = Autodesk.Navisworks.Api.Application.ActiveDocument;
+        Document oDoc = Application.ActiveDocument;
 
         // assume we get two model items
 
