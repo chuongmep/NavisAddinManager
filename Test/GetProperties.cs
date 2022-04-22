@@ -1,4 +1,7 @@
-﻿using System.Linq;
+﻿using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using System.Text;
 using System.Windows;
 using Autodesk.Navisworks.Api;
 using Autodesk.Navisworks.Api.Plugins;
@@ -9,9 +12,73 @@ public class GetProperties : AddInPlugin
 {
     public override int Execute(params string[] parameters)
     {
-        getProperty();
+        test();
+       // getProperty();
         return 0;
     }
+
+    void test()
+    {
+        Document oDoc = Autodesk.Navisworks.Api.Application.ActiveDocument;
+        string temppath = Path.Combine(Path.GetTempPath(), "test.txt");
+        using (StreamWriter st = new StreamWriter(temppath))
+        {
+            foreach (ModelItem oItem in oDoc.CurrentSelection.SelectedItems)
+
+            {
+                // each PropertyCategory
+
+                foreach (PropertyCategory oPC in oItem.PropertyCategories)
+
+                {
+                    st.Write("***Property Category  " +
+                                "[Display Name]: " +
+                                oPC.DisplayName +
+                                "[Internal Name]: " +
+                                oPC.Name + "****\n");
+
+
+                    // each property
+
+                    foreach (DataProperty oDP in oPC.Properties)
+
+                    {
+                        // is a display string
+
+                        if (oDP.Value.IsDisplayString)
+
+                        {
+                            st.Write("   [Display Name]: " +
+                                        oDP.DisplayName +
+                                        "[Internal Name]: " +
+                                        oDP.Name +
+                                        "[Value]: " +
+                                        oDP.Value.ToString() +
+                                        "***\n");
+                        }
+
+                        // is a date / time
+
+                        if (oDP.Value.IsDateTime)
+
+                        {
+                            st.Write("   [Display Name]: " +
+                                        oDP.DisplayName +
+                                        "[Internal Name]: " +
+                                        oDP.Name +
+                                        "[Value]: " +
+                                        oDP.Value.ToDateTime().ToShortTimeString() +
+                                        "***\n");
+                        }
+                    }
+                }
+            }
+            st.Close();
+            Process.Start(temppath);
+        }
+
+    }
+
 
     void getProperty()
 
