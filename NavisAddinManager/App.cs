@@ -1,7 +1,7 @@
 ﻿using Autodesk.Navisworks.Api.Plugins;
 using NavisAddinManager.Command;
 using NavisAddinManager.Properties;
-using Test;
+using Test = NavisAddinManager.Command.Test;
 
 namespace NavisAddinManager;
 
@@ -26,8 +26,8 @@ public class App  : CommandHandlerPlugin
                 addInManagerFaceless.Execute();
                 break;
             case "ID_ButtonTest":
-                TestAddInManagerManual hello = new TestAddInManagerManual();
-                hello.Execute();
+                Test test = new Test();
+                test.Execute();
                 break;
         }
         return 0;

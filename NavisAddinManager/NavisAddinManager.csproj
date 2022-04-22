@@ -110,10 +110,6 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Test\Test.csproj" />
-  </ItemGroup>
   <PropertyGroup>
     <PostBuildEvent>powershell -NoProfile -ExecutionPolicy Unrestricted $(SolutionDir)NavisAddinManager\postbuild.ps1 -Configuration '$(Configuration)' -SolutionDir '$(SolutionDir)' -ProjectDir '$(ProjectDir)' -Version '$(NavisVersion)'</PostBuildEvent>
   </PropertyGroup>

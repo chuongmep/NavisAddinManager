@@ -42,3 +42,12 @@ public class AddInManagerFaceLess : IAddinCommand
     }
 }
 
+public class Test : IAddinCommand
+{
+    public override int Action(params string[] parameters)
+    {
+        MessageBox.Show("Hello World");
+        return 0;
+    }
+}
+
