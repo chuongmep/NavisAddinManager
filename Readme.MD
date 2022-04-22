@@ -1,4 +1,4 @@
-# Navis Add-in Manager
+# Navisworks Add-in Manager
 
 ![Revit API](https://img.shields.io/badge/Navisworks%20API%202023-blue.svg)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgray.svg)
@@ -33,6 +33,7 @@ to support multiple platform API for developer. With current technology, you can
 
 ### Some feature include:
 
+- A newbie can create a new Add-in and explore **Navisworks API** easy with Add-in manager.
 - Add-in manager
     - AddInManager Manual : Use for normal process load/unload addin
     - AddInManager Faceless : use for load last process before addin without UI
