@@ -26,7 +26,7 @@ public class ABasicPlugin : AddInPlugin
                     bFoundFirst = true;
                 }
 
-                COMApi.InwOaNode? nwOaNode = newNode as COMApi.InwOaNode;
+                COMApi.InwOaNode nwOaNode = newNode as COMApi.InwOaNode;
                 walkNode(nwOaNode, bFoundFirst);
             }
         }
@@ -42,7 +42,7 @@ public class ABasicPlugin : AddInPlugin
 
                 COMApi.InwNodeFragsColl fragsColl = parentNode.Fragments();
                 object frag = fragsColl[fragindex];
-                COMApi.InwOaFragment3? nwOaFragment3 = frag as COMApi.InwOaFragment3;
+                COMApi.InwOaFragment3 nwOaFragment3 = frag as COMApi.InwOaFragment3;
                 nwOaFragment3.GenerateSimplePrimitives(
                     COMApi.nwEVertexProperty.eNORMAL,
                     callbkListener);
