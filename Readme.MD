@@ -52,7 +52,7 @@ to support multiple platform API for developer. With current technology, you can
 - [x] AddInManagerManual
 - [x] AddInManagerFaceless
 
-A sample command is shown below:
+A sample command to execute:
 
 - Way one : use full with Add-in Manager
 ``` csharp
@@ -62,6 +62,7 @@ A sample command is shown below:
     {
         public override int Execute(params string[] parameters)
         {
+            //Code Here
             MessageBox.Show("Hello World",Application.Title);
             return 0;
         }
@@ -77,6 +78,7 @@ A sample command is shown below:
     {
         public override int Execute(params string[] parameters)
         {
+            //Code Here
             MessageBox.Show("Hello World",Application.Title);
             return 0;
         }
