@@ -23,7 +23,6 @@ public class GetClashTest : INavisCommand
     {
         StringBuilder sb = new StringBuilder();
         Document doc = Application.ActiveDocument;
-        List<ClashTest> savedItems = new List<ClashTest>();
         DocumentClash documentClash = doc.GetClash();
         foreach (SavedItem savedItem in documentClash.TestsData.Tests)
         {
@@ -53,7 +52,8 @@ public class GetClashTest : INavisCommand
         {
             Logger.Write($"||Name:{dataProperty.Name}");
             Logger.Write($"||DisplayName:{dataProperty.DisplayName}");
-            Logger.Write($"||DisplayName:{dataProperty.Value}");
+            Logger.Write($"||Value:{dataProperty.Value}");
+            Logger.Write($"||CombinedName:{dataProperty.CombinedName}");
             Logger.Write("\n");
 
         }
