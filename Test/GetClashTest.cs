@@ -16,7 +16,6 @@ public class GetClashTest : INavisCommand
 
     public override void Action()
     {
-       
         GetInfoClash();
     }
     void GetInfoClash()
@@ -31,12 +30,16 @@ public class GetClashTest : INavisCommand
             foreach (SavedItem item in savedItemCollection)
             {
                 ClashResult clashResult = item as ClashResult;
-                PropertyCategoryCollection categories = clashResult.Item1.PropertyCategories;
-                foreach (PropertyCategory category in categories)
+                if (clashResult != null)
                 {
-                    GetPropertiesClashTest(category);
+                    PropertyCategoryCollection categories = clashResult.Item1.PropertyCategories;
+                    foreach (PropertyCategory category in categories)
+                    {
+                        GetPropertiesClashTest(category);
+                    }
+                    break;
                 }
-                break;
+               
             }
 
         }
