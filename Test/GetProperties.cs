@@ -19,55 +19,55 @@ public class GetProperties : AddInPlugin
 
     void test()
     {
-        Document oDoc = Autodesk.Navisworks.Api.Application.ActiveDocument;
+        Document doc = Autodesk.Navisworks.Api.Application.ActiveDocument;
         string temppath = Path.Combine(Path.GetTempPath(), "test.txt");
         using (StreamWriter st = new StreamWriter(temppath))
         {
-            foreach (ModelItem oItem in oDoc.CurrentSelection.SelectedItems)
+            foreach (ModelItem oItem in doc.CurrentSelection.SelectedItems)
 
             {
                 // each PropertyCategory
 
-                foreach (PropertyCategory oPC in oItem.PropertyCategories)
+                foreach (PropertyCategory propertyCategory in oItem.PropertyCategories)
 
                 {
                     st.Write("***Property Category  " +
                                 "[Display Name]: " +
-                                oPC.DisplayName +
+                                propertyCategory.DisplayName +
                                 "[Internal Name]: " +
-                                oPC.Name + "****\n");
+                                propertyCategory.Name + "****\n");
 
 
                     // each property
 
-                    foreach (DataProperty oDP in oPC.Properties)
+                    foreach (DataProperty dataProperty in propertyCategory.Properties)
 
                     {
                         // is a display string
 
-                        if (oDP.Value.IsDisplayString)
+                        if (dataProperty.Value.IsDisplayString)
 
                         {
                             st.Write("   [Display Name]: " +
-                                        oDP.DisplayName +
+                                        dataProperty.DisplayName +
                                         "[Internal Name]: " +
-                                        oDP.Name +
+                                        dataProperty.Name +
                                         "[Value]: " +
-                                        oDP.Value.ToString() +
+                                        dataProperty.Value.ToString() +
                                         "***\n");
                         }
 
                         // is a date / time
 
-                        if (oDP.Value.IsDateTime)
+                        if (dataProperty.Value.IsDateTime)
 
                         {
                             st.Write("   [Display Name]: " +
-                                        oDP.DisplayName +
+                                        dataProperty.DisplayName +
                                         "[Internal Name]: " +
-                                        oDP.Name +
+                                        dataProperty.Name +
                                         "[Value]: " +
-                                        oDP.Value.ToDateTime().ToShortTimeString() +
+                                        dataProperty.Value.ToDateTime().ToShortTimeString() +
                                         "***\n");
                         }
                     }
