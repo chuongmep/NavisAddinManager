@@ -16,6 +16,7 @@ public class GetClashTest : INavisCommand
 
     public override void Action()
     {
+       
         GetInfoClash();
     }
     void GetInfoClash()
@@ -50,8 +51,10 @@ public class GetClashTest : INavisCommand
         
         foreach (DataProperty dataProperty in propertyCategory.Properties)
         {
-            string displayName = dataProperty.DisplayName;
-            Logger.WriteLine(displayName);
+            Logger.Write($"||Name:{dataProperty.Name}");
+            Logger.Write($"||DisplayName:{dataProperty.DisplayName}");
+            Logger.Write($"||DisplayName:{dataProperty.Value}");
+            Logger.Write("\n");
 
         }
 
