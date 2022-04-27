@@ -27,6 +27,8 @@ to support multiple platform API for developer. With current technology, you can
 
 - [x] [Navis Add-In Manager](https://github.com/chuongmep/NavisAddInManager)
 
+- [x] [Cad Add-In Manager](https://github.com/chuongmep/CadAddInManager)
+
 - [x] More...
 
 ![](pic/7aF7wDel5L.gif)
