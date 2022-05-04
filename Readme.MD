@@ -1,5 +1,4 @@
 # Navisworks Add-in Manager
-
 ![Revit API](https://img.shields.io/badge/Navisworks%20API%202023-blue.svg)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgray.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
