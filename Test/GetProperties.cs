@@ -5,6 +5,7 @@ using System.Text;
 using System.Windows;
 using Autodesk.Navisworks.Api;
 using Autodesk.Navisworks.Api.Plugins;
+using Test.Helpers;
 
 namespace Test;
 

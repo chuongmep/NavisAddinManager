@@ -2,7 +2,7 @@
 using System.Windows;
 using Autodesk.Navisworks.Api.Plugins;
 
-namespace Test;
+namespace Test.Helpers;
 
 public abstract class INavisCommand : AddInPlugin
 {

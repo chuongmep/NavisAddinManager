@@ -7,6 +7,7 @@ using Autodesk.Navisworks.Api;
 using Autodesk.Navisworks.Api.Clash;
 using Autodesk.Navisworks.Api.Interop;
 using Autodesk.Navisworks.Api.Plugins;
+using Test.Helpers;
 using Application = Autodesk.Navisworks.Api.Application;
 
 namespace Test;

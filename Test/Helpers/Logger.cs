@@ -1,8 +1,7 @@
 ﻿using System.Diagnostics;
 using System.IO;
-using System.Windows.Forms;
 
-namespace Test;
+namespace Test.Helpers;
 
 public class Logger
 {
