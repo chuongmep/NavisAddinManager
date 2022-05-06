@@ -8,21 +8,17 @@ using Autodesk.Navisworks.Api.Plugins;
 
 namespace Test;
 
-public class GetProperties : AddInPlugin
+public class GetProperties : INavisCommand
 {
-    public override int Execute(params string[] parameters)
+    public override void Action()
     {
         test();
-       // getProperty();
-        return 0;
+        Logger.Open();
     }
-
     void test()
     {
         Document doc = Autodesk.Navisworks.Api.Application.ActiveDocument;
-        string temppath = Path.Combine(Path.GetTempPath(), "test.txt");
-        using (StreamWriter st = new StreamWriter(temppath))
-        {
+       
             foreach (ModelItem oItem in doc.CurrentSelection.SelectedItems)
 
             {
@@ -31,7 +27,7 @@ public class GetProperties : AddInPlugin
                 foreach (PropertyCategory propertyCategory in oItem.PropertyCategories)
 
                 {
-                    st.Write("***Property Category  " +
+                    Logger.Write("***Property Category  " +
                                 "[Display Name]: " +
                                 propertyCategory.DisplayName +
                                 "[Internal Name]: " +
@@ -48,7 +44,7 @@ public class GetProperties : AddInPlugin
                         if (dataProperty.Value.IsDisplayString)
 
                         {
-                            st.Write("   [Display Name]: " +
+                            Logger.Write("   [Display Name]: " +
                                         dataProperty.DisplayName +
                                         "[Internal Name]: " +
                                         dataProperty.Name +
@@ -62,7 +58,7 @@ public class GetProperties : AddInPlugin
                         if (dataProperty.Value.IsDateTime)
 
                         {
-                            st.Write("   [Display Name]: " +
+                            Logger.Write("   [Display Name]: " +
                                         dataProperty.DisplayName +
                                         "[Internal Name]: " +
                                         dataProperty.Name +
@@ -73,9 +69,7 @@ public class GetProperties : AddInPlugin
                     }
                 }
             }
-            st.Close();
-            Process.Start(temppath);
-        }
+        
 
     }
 
@@ -83,8 +77,7 @@ public class GetProperties : AddInPlugin
     void getProperty()
 
     {
-        Document oDoc =
-            Autodesk.Navisworks.Api.Application.ActiveDocument;
+        Document oDoc = Autodesk.Navisworks.Api.Application.ActiveDocument;
 
         // get the first item of the selection
 
