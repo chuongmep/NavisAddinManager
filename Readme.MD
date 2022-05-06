@@ -146,3 +146,13 @@ and [dotUltimate](https://www.jetbrains.com/dotnet/) tools, which both make open
 - Credit to [icons8.com](https://icons8.com) for the Navis Add-in Manager icons.
 - Credit to [Nice3point](https://github.com/Nice3point) for the CI/CD template.
 - Website helped me resize icon : [https://resizeappicon.com/](https://resizeappicon.com/)
+
+--- 
+## Learning Resouces
+
+- [Navisworks Developer Center](https://www.autodesk.com/developer-network/platform-technologies/navisworks)
+- [adndevblog](https://adndevblog.typepad.com/aec/navisworks/)
+- [Autodesk Navisworks Forum](https://forums.autodesk.com/t5/navisworks/ct-p/4)
+- [Navisworks API Docs](https://apidocs.co/apps/navisworks/2018/87317537-2911-4c08-b492-6496c82b3ed0.htm)
+- [Navisworks API Open Source](https://github.com/topics/navisworks-api)
+- [Navisworks Nuget](https://www.nuget.org/packages?q=chuongmep.navis)

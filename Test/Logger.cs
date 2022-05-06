@@ -45,7 +45,11 @@ public class Logger
 
     public Logger Open()
     {
-        Process.Start(logPath);
+        if (File.Exists(logPath))
+        {
+            Process.Start(logPath);
+            return this;
+        }
         return this;
     }
 }
