@@ -6,7 +6,6 @@ public static class VariantDataUtils
 {
     public static dynamic ToVarDisplayString(this VariantData variantData)
     {
-        if (!variantData.IsDisplayString) return variantData.ToString();
         switch (variantData.DataType)
         {
             case VariantDataType.None:
