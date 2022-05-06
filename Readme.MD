@@ -1,19 +1,12 @@
 # Navisworks Add-in Manager
+![Navis API](https://img.shields.io/badge/Navisworks%20API%202023-blue.svg) ![Platform](https://img.shields.io/badge/platform-Windows-lightgray.svg) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-![Revit API](https://img.shields.io/badge/Navisworks%20API%202023-blue.svg)
-![Platform](https://img.shields.io/badge/platform-Windows-lightgray.svg)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![ReSharper](https://img.shields.io/badge/ReSharper-2021.3.3-yellow) ![Rider](https://img.shields.io/badge/Rider-2021.3.3-yellow) ![Visual Studio 2022](https://img.shields.io/badge/Visual_Studio_2022_Preview_2.0-17.1.0-yellow) ![.NET Framework](https://img.shields.io/badge/.NET_6.0-yellow)
+
+[![Publish](../../actions/workflows/Workflow.yml/badge.svg)](../../actions)
 <a href="https://twitter.com/intent/follow?screen_name=chuongmep">
 <img src="https://img.shields.io/twitter/follow/chuongmep?style=social&logo=twitter"
 alt="follow on Twitter"></a>
-
-![ReSharper](https://img.shields.io/badge/ReSharper-2021.3.3-yellow)
-![Rider](https://img.shields.io/badge/Rider-2021.3.3-yellow)
-![Visual Studio 2022](https://img.shields.io/badge/Visual_Studio_2022_Preview_2.0-17.1.0-yellow)
-![.NET Framework](https://img.shields.io/badge/.NET_6.0-yellow)
-
-[![Publish](../../actions/workflows/Workflow.yml/badge.svg)](../../actions)
-
 ## Summary
 
 ![AddinManager](pic/Addin.png)
@@ -26,6 +19,8 @@ to support multiple platform API for developer. With current technology, you can
 - [x] [Revit Add-In Manager](https://github.com/chuongmep/RevitAddInManager)
 
 - [x] [Navis Add-In Manager](https://github.com/chuongmep/NavisAddInManager)
+
+- [x] [Cad Add-In Manager](https://github.com/chuongmep/CadAddInManager)
 
 - [x] More...
 
@@ -134,10 +129,9 @@ Please refer to the [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Sponsors
 
-Thanks to [JetBrains](https://www.jetbrains.com/) for providing licenses for [Rider](https://www.jetbrains.com/rider/)
-and [dotUltimate](https://www.jetbrains.com/dotnet/) tools, which both make open-source development a real pleasure!
-
 ![](pic/jetbrains.png)
+
+Thanks for providing a free All product IDE for this project
 
 ---
 
