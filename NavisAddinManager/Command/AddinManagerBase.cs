@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.IO;
+using System.Windows;
 using Autodesk.Navisworks.Api.Plugins;
 using NavisAddinManager.Model;
 using NavisAddinManager.View;
@@ -31,6 +32,11 @@ public sealed class AddinManagerBase
     public int RunActiveCommand(AddInManagerViewModel vm, params string[] parameters)
     {
         var filePath = _activeCmd.FilePath;
+        if (!File.Exists(filePath))
+        {
+            MessageBox.Show("File not found: " + filePath,DefaultSetting.AppName, MessageBoxButton.OK, MessageBoxImage.Error);
+            return 0;
+        }
         int result;
         try
         {
