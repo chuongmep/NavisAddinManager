@@ -49,6 +49,15 @@ to support multiple platform API for developer. With current technology, you can
 - [x] AddInManagerManual
 - [x] AddInManagerFaceless
 
+### Trace/Debug
+
+- [x] Show/Hide result inside **Dockpanel Navisworks**.
+- [x] Show Result history inside **Navis Addin Manager**.
+- [x] Clear Result.
+- [X] Show Result by color.
+
+![](pic/Trace-Debug.png)
+
 A sample command to execute:
 
 - Way one : use full with Add-in Manager
