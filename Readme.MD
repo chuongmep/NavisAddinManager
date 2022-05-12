@@ -29,11 +29,13 @@ to support multiple platform API for developer. With current technology, you can
 ### Some feature include:
 
 - A newbie can create a new Add-in and explore **Navisworks API** easy with Add-in manager.
+- Add-in tester(use Debug and Trace to test your add-in).
+- **Debug / Trace** : Support Show result use [Debug](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.debug?view=net-6.0) or [Trace](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.trace?view=net-6.0) to show result in Navisworks.
 - Add-in manager
     - AddInManager Manual : Use for normal process load/unload addin
     - AddInManager Faceless : use for load last process before addin without UI
 - Allow user know whether plugin can load successfully or not.
-- No depend on any library from outside **Navisworks**.
+- No depend on any library from outside **Navisworks API**.
 - <kbd>F5</kbd> - Load fresh plugin don't need load again.
 - <kbd>F1</kbd> - Go link open source report some error,bug or feature request.
 - <kbd>Delete</kbd> - Quick remove by use right click or use from keyboard.
@@ -80,6 +82,24 @@ A sample command to execute:
     }
 ```
 ---
+- Quick Example to Debug or Trace result output :
+
+```cs
+using System.Diagnostics;
+using Autodesk.Navisworks.Api.Plugins;
+public class DebugTrace : AddInPlugin
+{
+    public override int Execute(params string[] parameters)
+    {
+        Trace.WriteLine($"Warning: This is a warning");
+        Trace.WriteLine($"Error: This is a error");
+        Trace.WriteLine($"Add: This is a add");
+        Trace.WriteLine($"Modify: This is a modify");
+        Trace.WriteLine($"Delete: This is a delete");
+        return 0;
+    }
+}
+```
 
 ## Installation
 
