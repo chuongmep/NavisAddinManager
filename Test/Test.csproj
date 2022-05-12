@@ -35,6 +35,14 @@
     <PublishSingleFile>true</PublishSingleFile>
     <PublishTrimmed>true</PublishTrimmed>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug N22' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug N23' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Chuongmep.Navis.Api.Autodesk.Navisworks.ComApi" Version="$(NavisVersion).*" />
     <PackageReference Include="Chuongmep.Navis.Api.Autodesk.Navisworks.Interop.ComApi" Version="$(NavisVersion).*" />

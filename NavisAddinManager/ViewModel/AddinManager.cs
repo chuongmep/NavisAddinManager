@@ -2,6 +2,7 @@
 using System.IO;
 using System.Windows;
 using NavisAddinManager.Model;
+using MessageBox = System.Windows.MessageBox;
 
 namespace NavisAddinManager.ViewModel;
 

@@ -4,7 +4,7 @@
     <LangVersion>latest</LangVersion>
     <PlatformTarget>x64</PlatformTarget>
     <ImplicitUsings>true</ImplicitUsings>
-    <UseWindowsForms>false</UseWindowsForms>
+    <UseWindowsForms>true</UseWindowsForms>
     <TargetFramework>net48</TargetFramework>
     <Configurations>Debug N22;Debug N23</Configurations>
     <Configurations>$(Configurations);Release N20;Release N21;Release N22;Release N23</Configurations>

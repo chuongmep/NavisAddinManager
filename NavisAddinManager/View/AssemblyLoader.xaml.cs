@@ -4,6 +4,8 @@ using System.Text;
 using System.Windows;
 using Microsoft.Win32;
 using NavisAddinManager.Model;
+using MessageBox = System.Windows.MessageBox;
+using OpenFileDialog = Microsoft.Win32.OpenFileDialog;
 
 namespace NavisAddinManager.View;
 

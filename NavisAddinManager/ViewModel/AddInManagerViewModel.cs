@@ -9,6 +9,9 @@ using NavisAddinManager.Command;
 using NavisAddinManager.Model;
 using NavisAddinManager.View;
 using NavisAddinManager.View.Control;
+using MessageBox = System.Windows.MessageBox;
+using OpenFileDialog = Microsoft.Win32.OpenFileDialog;
+using SaveFileDialog = Microsoft.Win32.SaveFileDialog;
 
 namespace NavisAddinManager.ViewModel;
 
@@ -135,7 +138,23 @@ public class AddInManagerViewModel : ViewModelBase
         get => isTabCmdSelected;
         set => OnPropertyChanged(ref isTabCmdSelected, value);
     }
+    private bool isTabLogSelected;
 
+    public bool IsTabLogSelected
+    {
+        get
+        {
+            if (isTabLogSelected)
+            {
+                LogControlViewModel vm = new LogControlViewModel(){FrmLogControl = FrmAddInManager.LogControl};
+                FrmAddInManager.LogControl.DataContext = vm;
+                FrmAddInManager.LogControl.Loaded += vm.LogFileWatcher;
+                FrmAddInManager.LogControl.Unloaded += vm.UserControl_Unloaded;
+            };
+            return isTabLogSelected;
+        }
+        set => OnPropertyChanged(ref isTabLogSelected, value);
+    }
     private bool isTabAppSelected;
 
     public bool IsTabAppSelected

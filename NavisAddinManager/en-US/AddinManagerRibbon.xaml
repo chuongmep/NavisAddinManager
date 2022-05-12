@@ -21,6 +21,13 @@
                     Orientation="Vertical"
                     ShowText="True"
                     Size="Large" />
+                <nvw:NWRibbonButton
+                    x:Uid="UID_ButtonDockPanelCommand"
+                    Id="ID_ButtonDockPanelCommand"
+                    KeyTip="X3"
+                    Orientation="Vertical"
+                    ShowText="True"
+                    Size="Large" />
             </RibbonPanelSource>
         </RibbonPanel>
         <RibbonPanel x:Uid="UID_Lab_PANEL">
