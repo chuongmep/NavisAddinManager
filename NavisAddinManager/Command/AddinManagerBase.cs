@@ -20,7 +20,7 @@ public sealed class AddinManagerBase
         var FrmAddInManager = new FrmAddInManager(vm);
         FrmAddInManager.WindowStartupLocation = WindowStartupLocation.CenterScreen;
         FrmAddInManager.SetNavisAsWindowOwner();
-        FrmAddInManager.ShowDialog();
+        FrmAddInManager.Show();
         return 0;
     }
 
