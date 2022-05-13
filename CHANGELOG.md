@@ -1,4 +1,7 @@
 # Changelog
+- 2022-05-13 **1.0.3**
+  - Support Debug/Trace Output
+  - Support Dockpanel show/hide result Debug/Trace Output
 - 2022-04-21 **1.0.2**
   - Support `Crt+MouseWheel` to ZoomIn ZoomOut Command Size
 - 2022-04-20 **1.0.1**
