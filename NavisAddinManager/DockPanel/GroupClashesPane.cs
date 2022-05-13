@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms.Integration;
+﻿using System.Windows.Forms;
+using System.Windows.Forms.Integration;
 using Autodesk.Navisworks.Api.Plugins;
 using NavisAddinManager.View.Control;
 using Ribbon.Navis.DockPanel;
