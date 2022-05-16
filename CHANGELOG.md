@@ -1,4 +1,7 @@
 # Changelog
+- 2022-05-16 **1.0.4**
+  - Support copy Content Debug/Trace Output
+  - Fix bug can't use search and fill content form.
 - 2022-05-13 **1.0.3**
   - Support Debug/Trace Output
   - Support Dockpanel show/hide result Debug/Trace Output
