@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using System.Windows.Forms;
 using System.Windows.Input;
 using NavisAddinManager.Model;
 using NavisAddinManager.ViewModel;
@@ -30,20 +31,6 @@ namespace NavisAddinManager.View.Control
             Clipboard.SetText(sb.ToString());
         }
         private void RightClickCopyCmdCanExecute(object sender, CanExecuteRoutedEventArgs e)
-        {
-            e.CanExecute = listBox_LogMessages.SelectedItem != null;
-        }
-        private void CtrlCCopyCmdExecuted(object sender, ExecutedRoutedEventArgs e)
-        {
-            StringBuilder sb = new StringBuilder();
-            foreach (LogMessageString dd in listBox_LogMessages.SelectedItems)
-            {
-                sb.AppendLine(dd.Message);
-            }
-            Clipboard.SetText(sb.ToString());
-        }
-
-        private void CtrlCCopyCmdCanExecute(object sender, CanExecuteRoutedEventArgs e)
         {
             e.CanExecute = listBox_LogMessages.SelectedItem != null;
         }

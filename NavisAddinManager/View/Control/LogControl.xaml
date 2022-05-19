@@ -44,7 +44,7 @@
             </ListBox.ItemTemplate>
             <ListBox.CommandBindings>
                 <CommandBinding Command="ApplicationCommands.Copy"
-                                CanExecute="CtrlCCopyCmdCanExecute" Executed="CtrlCCopyCmdExecuted" />
+                                CanExecute="RightClickCopyCmdCanExecute" Executed="RightClickCopyCmdExecuted" />
             </ListBox.CommandBindings>
             <ListBox.ContextMenu>
                 <ContextMenu>
