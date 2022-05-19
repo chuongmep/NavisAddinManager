@@ -16,6 +16,8 @@ he/she modifies the addin code and wants to re-compile. But with **Add-In Manage
 directly without closing & re-opening [Navisworks](https://www.autodesk.com/products/navisworks/overview) again and again.This tool enables users to test plugin code within Navisworks without having to create an entire plugin first.This is a next branch from [Revit Addin Manager](https://github.com/chuongmep/RevitAddInManager)
 to support multiple platform API for developer. With current technology, you can use [Hot Reload](https://docs.microsoft.com/en-us/visualstudio/debugger/hot-reload?view=vs-2022) to speed it up.But try this project it will be faster with any Addin.
 
+![](pic/WhyAddinManager.png)
+
 - [x] [Revit Add-In Manager](https://github.com/chuongmep/RevitAddInManager)
 
 - [x] [Navis Add-In Manager](https://github.com/chuongmep/NavisAddInManager)
