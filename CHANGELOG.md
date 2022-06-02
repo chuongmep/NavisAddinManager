@@ -1,4 +1,7 @@
 # Changelog
+- 2022-06-02 **1.0.5**
+  - Support event ArrowKeyDown and ArrowKeyUp to move between items search and TreeView 
+  - Support press key Esc from keyboard to close Form.
 - 2022-05-16 **1.0.4**
   - Support copy Content Debug/Trace Output
   - Fix bug can't use search and fill content form.

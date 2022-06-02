@@ -40,6 +40,10 @@ to support multiple platform API for developer. With current technology, you can
 - <kbd>F1</kbd> - Go link open source report some error,bug or feature request.
 - <kbd>Delete</kbd> - Quick remove by use right click or use from keyboard.
 - <kbd>Crt + MouseWheel</kbd> - Zoom in/out by use mouse wheel in command plugin.
+- <kbd>Arrow Up</kbd> - Move from TreeView to search.
+- <kbd>Arrow Down</kbd> - Move from search to TreeView.
+- <kbd>Esc</kbd> - Quick Close Add-in Manager.
+- <kbd>Enter</kbd> - Quick Run Execute a command selected in Add-in Manager.
 ## Add-In Manager
 
 ![](pic/AddinManager.png)
