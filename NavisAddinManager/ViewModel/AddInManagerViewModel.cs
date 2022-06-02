@@ -246,7 +246,7 @@ public class AddInManagerViewModel : ViewModelBase
         return MainTrees;
     }
 
-    private void ExecuteAddinCommandClick()
+    public void ExecuteAddinCommandClick()
     {
         try
         {

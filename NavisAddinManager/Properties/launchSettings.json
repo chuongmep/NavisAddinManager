@@ -1,6 +1,10 @@
 {
   "profiles": {
-    "NavisAddinManager": {
+    "Navis2022": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Program Files\\Autodesk\\Navisworks Manage 2022\\Roamer.exe"
+    }   ,
+    "Navis2023": {
       "commandName": "Executable",
       "executablePath": "C:\\Program Files\\Autodesk\\Navisworks Manage 2023\\Roamer.exe"
     }

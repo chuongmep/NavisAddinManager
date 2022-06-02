@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Windows.Input;
 using NavisAddinManager.ViewModel;
+using KeyEventArgs = System.Windows.Input.KeyEventArgs;
 
 namespace NavisAddinManager.View;
 
@@ -63,5 +64,44 @@ public partial class FrmAddInManager : Window
         {
             TreeViewCommand.FontSize -= 2f;
         }
+    }
+
+    private void HandleTextboxKeyPress(object sender, KeyEventArgs e)
+    {
+        if (e.Key == Key.Down)
+        {
+            if (viewModel.IsTabCmdSelected)
+            {
+                TreeViewCommand.Focus();
+            }
+            else
+            {
+                LogControl.Focus();
+            }
+        }
+    }
+    private void HandleTreeViewCommandKeyPress(object sender, KeyEventArgs e)
+    {
+        int indexCmd = TreeViewCommand.Items.IndexOf(TreeViewCommand.SelectedItem);
+        if (e.Key == Key.Up && TabCommand.IsFocused)
+        {
+            tbxSearch.Focus();
+        }
+        else if (e.Key == Key.Up && indexCmd==0 && TabCommand.IsSelected)
+        {
+            TabCommand.Focus();
+        }
+        if (e.Key == Key.Down && TabCommand.IsSelected)
+        {
+            TreeViewCommand.Focus();
+        }
+        if (e.Key == Key.Enter)
+        {
+            viewModel.ExecuteAddinCommandClick();
+        }
+    }
+    private void CloseFormEvent(object sender, KeyEventArgs e)
+    {
+        if (e.Key == Key.Escape) Close();
     }
 }
