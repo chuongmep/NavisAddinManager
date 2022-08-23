@@ -8,7 +8,7 @@ namespace NavisAddinManager.DockPanel
 {
     [Plugin($"AddinManager.ShowHidePanel", "ChuongMep", DisplayName = "Trace/Debug Output", ToolTip = "Add-in-Manager")]
     [DockPanePlugin(350, 600, AutoScroll = true, MinimumHeight = 300)]
-    class GroupClashesPane : DockPaneBase
+    class AddinManagerPane : DockPaneBase
     {
         public override Control CreateControlPane()
         {
