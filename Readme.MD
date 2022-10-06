@@ -177,6 +177,11 @@ Thanks for providing a free All product IDE for this project
 - Website helped me resize icon : [https://resizeappicon.com/](https://resizeappicon.com/)
 
 --- 
+
+## Open Source Recomment
+
+- [NavisAppInfo](https://github.com/chuongmep/NavisAppInfo) : Allow user snoop properties, method, track event. Easy to explore Navsiworks.
+
 ## Learning Resouces
 
 - [Navisworks Developer Center](https://www.autodesk.com/developer-network/platform-technologies/navisworks)
