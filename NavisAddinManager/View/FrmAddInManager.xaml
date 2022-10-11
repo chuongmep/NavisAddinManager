@@ -45,25 +45,38 @@
             <TextBox
                 x:Name="tbxSearch"
                 Grid.Row="0"
-                Margin="5,0,5,0"
+                Height="25"
+                Margin="1,0,5,0"
                 VerticalAlignment="Center"
-                Text="{Binding SearchText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                PreviewKeyDown="HandleTextboxKeyPress">
+                PreviewKeyDown="HandleTextboxKeyPress"
+                Text="{Binding SearchText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
                 <TextBox.Resources>
                     <VisualBrush
                         x:Key="tbxText"
                         AlignmentX="Left"
+                        AlignmentY="Center"
                         Stretch="None"
                         TileMode="None">
                         <VisualBrush.Visual>
-                            <TextBlock Foreground="DimGray" Text="Search..." />
+                            <Grid Background="Transparent">
+                                <TextBlock
+                                    Margin="5,0"
+                                    Foreground="DimGray"
+                                    Text="Search..." />
+                            </Grid>
                         </VisualBrush.Visual>
                     </VisualBrush>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="3" />
+                    </Style>
                 </TextBox.Resources>
                 <TextBox.Style>
                     <Style TargetType="TextBox">
-                        <Setter Property="BorderBrush" Value="AliceBlue" />
+                        <Setter Property="VerticalContentAlignment" Value="Center" />
+                        <Setter Property="BorderBrush" Value="#FFAFAFAF" />
+                        <Setter Property="BorderThickness" Value="0.5" />
                         <Setter Property="Background" Value="Transparent" />
+                        <Setter Property="Margin" Value="5,5,0,5" />
                         <Style.Triggers>
                             <Trigger Property="Text" Value="">
                                 <Setter Property="Background" Value="{StaticResource tbxText}" />
