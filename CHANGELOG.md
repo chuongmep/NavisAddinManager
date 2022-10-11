@@ -1,4 +1,6 @@
 # Changelog
+- 2022-10-11 **1.0.6**
+  - Improve user interface.
 - 2022-06-02 **1.0.5**
   - Support event ArrowKeyDown and ArrowKeyUp to move between items search and TreeView 
   - Support press key Esc from keyboard to close Form.
