@@ -1,4 +1,6 @@
 # Changelog
+- 2022-12-21 **1.0.7**
+  - Fix issue load relative path with window parallel macOS.
 - 2022-10-11 **1.0.6**
   - Improve user interface.
 - 2022-06-02 **1.0.5**
