@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ApplicationPackage SchemaVersion="1.0" Name="AddinManager" AppVersion="1.0.0.0" ProductType="Application" Author="ADSK" ProductCode="{0F2CB7C0-2F97-424C-B8DA-0E8233972A7E}">
   <Components Description="Navisworks 2020 parts">
-    <RuntimeRequirements OS="Win64" Platform="NAVMAN" SeriesMin="Nw17" SeriesMax="Nw17" />
+    <RuntimeRequirements OS="Win64" Platform="NAVMAN|NAVSIM" SeriesMin="Nw17" SeriesMax="Nw17" />
     <ComponentEntry AppName="AddinManager" AppType="ManagedPlugin" ModuleName="./Contents/2020/NavisAddinManager.dll" />
   </Components>
   <Components Description="Navisworks 2021 parts">
-    <RuntimeRequirements OS="Win64" Platform="NAVMAN" SeriesMin="Nw18" SeriesMax="Nw18" />
+    <RuntimeRequirements OS="Win64" Platform="NAVMAN|NAVSIM" SeriesMin="Nw18" SeriesMax="Nw18" />
     <ComponentEntry AppName="AddinManager" AppType="ManagedPlugin" ModuleName="./Contents/2021/NavisAddinManager.dll" />
   </Components>
   <Components Description="Navisworks 2022 parts">
-    <RuntimeRequirements OS="Win64" Platform="NAVMAN" SeriesMin="Nw19" SeriesMax="Nw19" />
+    <RuntimeRequirements OS="Win64" Platform="NAVMAN|NAVSIM" SeriesMin="Nw19" SeriesMax="Nw19" />
     <ComponentEntry AppName="AddinManager" AppType="ManagedPlugin" ModuleName="./Contents/2022/NavisAddinManager.dll" />
   </Components>
   <Components Description="Navisworks 2023 parts">
-    <RuntimeRequirements OS="Win64" Platform="NAVMAN" SeriesMin="Nw20" SeriesMax="Nw20" />
+    <RuntimeRequirements OS="Win64" Platform="NAVMAN|NAVSIM" SeriesMin="Nw20" SeriesMax="Nw20" />
     <ComponentEntry AppName="AddinManager" AppType="ManagedPlugin" ModuleName="./Contents/2023/NavisAddinManager.dll" />
   </Components>
 </ApplicationPackage>
