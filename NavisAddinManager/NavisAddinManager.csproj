@@ -6,8 +6,8 @@
     <ImplicitUsings>true</ImplicitUsings>
     <UseWindowsForms>true</UseWindowsForms>
     <TargetFramework>net48</TargetFramework>
-    <Configurations>Debug N22;Debug N23</Configurations>
-    <Configurations>$(Configurations);Release N20;Release N21;Release N22;Release N23</Configurations>
+    <Configurations>Debug N22;Debug N23;Debug N24</Configurations>
+    <Configurations>$(Configurations);Release N20;Release N21;Release N22;Release N23;Release N24</Configurations>
     <RootNamespace>NavisAddinManager</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition="$(Configuration.Contains('Debug'))">
@@ -35,6 +35,10 @@
   <PropertyGroup Condition="$(Configuration.Contains('N23'))">
     <NavisVersion>2023</NavisVersion>
     <DefineConstants>$(DefineConstants);N23</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(Configuration.Contains('N24'))">
+    <NavisVersion>2024</NavisVersion>
+    <DefineConstants>$(DefineConstants);N24</DefineConstants>
   </PropertyGroup>
   <PropertyGroup>
     <Version>$(NavisVersion)</Version>
