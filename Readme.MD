@@ -13,8 +13,8 @@ alt="follow on Twitter"></a>
 
 ![AddinManager](pic/Addin.png)
 
-Usually, when developing and debugging an addin with [Navisworks](https://www.autodesk.com/products/navisworks/overview) API, user has to close & re-open [Navisworks](https://www.autodesk.com/products/navisworks/overview) each time
-he/she modifies the addin code and wants to re-compile. But with **Add-In Manager**, user can modify and run the Addin.
+Usually, when developing and debugging an add-in with [Navisworks](https://www.autodesk.com/products/navisworks/overview) API, user has to close & re-open [Navisworks](https://www.autodesk.com/products/navisworks/overview) each time
+he/she modifies the add-in code and wants to re-compile. But with **Add-In Manager**, user can modify and run the Addin.
 directly without closing & re-opening [Navisworks](https://www.autodesk.com/products/navisworks/overview) again and again.This tool enables users to test plugin code within Navisworks without having to create an entire plugin first.This is a next branch from [Revit Addin Manager](https://github.com/chuongmep/RevitAddInManager)
 to support multiple platform API for developer. With current technology, you can use [Hot Reload](https://docs.microsoft.com/en-us/visualstudio/debugger/hot-reload?view=vs-2022) to speed it up.But try this project it will be faster with any Addin.
 
@@ -178,14 +178,14 @@ Thanks for providing a free All product IDE for this project
 
 --- 
 
-## Open Source Recomment
+## Open Source Recommend
 
-- [NavisAppInfo](https://github.com/chuongmep/NavisAppInfo) : Allow user snoop properties, method, track event. Easy to explore Navsiworks.
+- [NavisLookup](https://github.com/chuongmep/NavisLookup) : Allow user snoop properties, method, track event. Easy to explore Navsiworks.
 
-## Learning Resouces
+## Learning Resources
 
 - [Navisworks Developer Center](https://www.autodesk.com/developer-network/platform-technologies/navisworks)
-- [adndevblog](https://adndevblog.typepad.com/aec/navisworks/)
+- [Adn Dev Blog](https://adndevblog.typepad.com/aec/navisworks/)
 - [Autodesk Navisworks Forum](https://forums.autodesk.com/t5/navisworks/ct-p/4)
 - [Navisworks API Docs](https://apidocs.co/apps/navisworks/2018/87317537-2911-4c08-b492-6496c82b3ed0.htm)
 - [Navisworks API Open Source](https://github.com/topics/navisworks-api)
