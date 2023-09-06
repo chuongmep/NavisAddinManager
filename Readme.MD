@@ -9,6 +9,8 @@
 <a href="https://twitter.com/intent/follow?screen_name=chuongmep">
 <img src="https://img.shields.io/twitter/follow/chuongmep?style=social&logo=twitter"
 alt="follow on Twitter"></a>
+
+![](pic/NavisAddinManager.png)
 ## Summary
 
 ![AddinManager](pic/Addin.png)
