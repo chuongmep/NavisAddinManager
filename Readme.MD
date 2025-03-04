@@ -1,5 +1,5 @@
 # Navisworks Add-in Manager
-![Navis API](https://img.shields.io/badge/Navisworks%20API%202024-blue.svg) ![Platform](https://img.shields.io/badge/platform-Windows-lightgray.svg) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Navis API](https://img.shields.io/badge/Navisworks%20API%202025-blue.svg) ![Platform](https://img.shields.io/badge/platform-Windows-lightgray.svg) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ![ReSharper](https://img.shields.io/badge/ReSharper-2023.0.0-yellow) ![Rider](https://img.shields.io/badge/Rider-2023.0.0-yellow) ![Visual Studio 2022](https://img.shields.io/badge/Visual_Studio_2022-yellow) ![.NET Framework](https://img.shields.io/badge/.NET_6.0-yellow)
 
@@ -122,7 +122,7 @@ public class DebugTrace : AddInPlugin
 
 Please follow last release at section [Release](https://github.com/chuongmep/NavisAddInManager/releases/latest)
 
-Support Navisworks Version : 2020, 2021, 2022, 2023,2024.
+Support Navisworks Version : 2021, 2022, 2023, 2024, 2025.
 ---
 
 ## Guideline
