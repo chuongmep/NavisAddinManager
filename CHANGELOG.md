@@ -1,4 +1,6 @@
 # Changelog
+- 2025-03-04 **1.1.0**
+  - Support Version 2025
 - 2023-04-13 **1.0.9**
   - Support Version 2024
 - 2023-01-30 **1.0.8**

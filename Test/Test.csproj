@@ -8,12 +8,8 @@
     <PlatformTarget>x64</PlatformTarget>
     <UseWindowsForms>true</UseWindowsForms>
     <UseWpf>true</UseWpf>
-    <Configurations>Debug N22;Debug N23;Debug N24</Configurations>
-    <Configurations>$(Configurations);Release N20;Release N21;Release N22;Release N23;Release N24</Configurations>
-  </PropertyGroup>
-  <PropertyGroup Condition="$(Configuration.Contains('N20'))">
-    <NavisVersion>2020</NavisVersion>
-    <DefineConstants>$(DefineConstants);N20</DefineConstants>
+    <Configurations>Debug N22;Debug N23;Debug N24;</Configurations>
+    <Configurations>$(Configurations);Release N21;Release N22;Release N23;Release N24;Release N25</Configurations>
   </PropertyGroup>
   <PropertyGroup Condition="$(Configuration.Contains('N21'))">
     <NavisVersion>2021</NavisVersion>
@@ -31,13 +27,16 @@
     <NavisVersion>2024</NavisVersion>
     <DefineConstants>$(DefineConstants);N24</DefineConstants>
   </PropertyGroup>
+  <PropertyGroup Condition="$(Configuration.Contains('N25'))">
+    <NavisVersion>2025</NavisVersion>
+    <DefineConstants>$(DefineConstants);N25</DefineConstants>
+  </PropertyGroup>
   <PropertyGroup>
     <Version>$(NavisVersion)</Version>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <Description>A Project Support for developer in Navisworks </Description>
     <PublishSingleFile>true</PublishSingleFile>
-    <PublishTrimmed>true</PublishTrimmed>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug N22' ">
     <DebugSymbols>true</DebugSymbols>
@@ -53,9 +52,9 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Chuongmep.Navis.Api.Autodesk.Navisworks.ComApi" Version="$(NavisVersion).*" />
-    <PackageReference Include="Chuongmep.Navis.Api.Autodesk.Navisworks.Interop.ComApi" Version="$(NavisVersion).*" />
+<!--    <PackageReference Include="Chuongmep.Navis.Api.Autodesk.Navisworks.Interop.ComApi" Version="$(NavisVersion).*" />-->
     <PackageReference Include="Chuongmep.Navis.Api.Autodesk.Navisworks.Api" Version="$(NavisVersion).*" />
-    <PackageReference Include="Chuongmep.Navis.Api.Autodesk.Navisworks.Controls" Version="$(NavisVersion).*" />
+<!--    <PackageReference Include="Chuongmep.Navis.Api.Autodesk.Navisworks.Controls" Version="$(NavisVersion).*" />-->
     <PackageReference Include="Chuongmep.Navis.Api.Autodesk.Navisworks.Clash" Version="$(NavisVersion).*" />
   </ItemGroup>
 
