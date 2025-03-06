@@ -1,4 +1,7 @@
 # Changelog
+- 2025-03-06 **1.1.1**
+  - Support Version 2025
+  - Fix issue ribbon not show in Navisworks 2025
 - 2025-03-04 **1.1.0**
   - Support Version 2025
 - 2023-04-13 **1.0.9**

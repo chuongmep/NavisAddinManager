@@ -20,4 +20,8 @@
     <RuntimeRequirements OS="Win64" Platform="NAVMAN|NAVSIM" SeriesMin="Nw21" SeriesMax="Nw21" />
     <ComponentEntry AppName="AddinManager" AppType="ManagedPlugin" ModuleName="./Contents/2024/NavisAddinManager.dll" />
   </Components>
+  <Components Description="Navisworks 2025 parts">
+    <RuntimeRequirements OS="Win64" Platform="NAVMAN|NAVSIM" SeriesMin="Nw22" SeriesMax="Nw22" />
+    <ComponentEntry AppName="AddinManager" AppType="ManagedPlugin" ModuleName="./Contents/2025/NavisAddinManager.dll" />
+  </Components>
 </ApplicationPackage>
