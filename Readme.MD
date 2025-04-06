@@ -13,6 +13,17 @@
 alt="follow on Twitter"></a>
 
 ![](pic/NavisAddinManager.png)
+
+## 💖 Support This Project
+
+If you like this project and want to support its development, please consider making a donation. Your contributions will help us continue to improve and maintain the project.
+
+<p align="center">
+  <a href="https://buy.stripe.com/9AQ5mc7pA6s7fza9AG">
+    <img src="https://img.shields.io/badge/Donate-Stripe-blue?style=for-the-badge&logo=stripe" alt="Donate with Stripe" />
+  </a>
+</p>
+
 ## Summary
 
 ![AddinManager](pic/Addin.png)
