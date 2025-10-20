@@ -1,7 +1,8 @@
 # Navisworks Add-in Manager
-![Navis API](https://img.shields.io/badge/Navisworks%20API%20-2021%20To%202025-blue.svg) ![Platform](https://img.shields.io/badge/platform-Windows-lightgray.svg) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-![ReSharper](https://img.shields.io/badge/ReSharper-2024.3.6-yellow) ![Rider](https://img.shields.io/badge/Rider-2024.3.6-yellow) ![Visual Studio 2022](https://img.shields.io/badge/Visual_Studio_2022-yellow) 
+![Navis API](https://img.shields.io/badge/Navisworks%20API%20-2021%20To%202026-blue.svg) ![Platform](https://img.shields.io/badge/platform-Windows-lightgray.svg) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+![ReSharper](https://img.shields.io/badge/ReSharper-2024.3.6-yellow) ![Rider](https://img.shields.io/badge/Rider-2024.3.6-yellow) ![Visual Studio 2022](https://img.shields.io/badge/Visual_Studio_2022-yellow)
 
 ![.NET](https://img.shields.io/badge/.NET_8.0-yellow)
 
@@ -49,8 +50,8 @@ to support multiple platform API for developer. With current technology, you can
 - Add-in tester(use Debug and Trace to test your add-in).
 - **Debug / Trace** : Support Show result use [Debug](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.debug?view=net-6.0) or [Trace](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.trace?view=net-6.0) to show result in Navisworks.
 - Add-in manager
-    - AddInManager Manual : Use for normal process load/unload addin
-    - AddInManager Faceless : use for load last process before addin without UI
+  - AddInManager Manual : Use for normal process load/unload addin
+  - AddInManager Faceless : use for load last process before addin without UI
 - Allow user know whether plugin can load successfully or not.
 - No depend on any library from outside **Navisworks API**.
 - <kbd>F5</kbd> - Load fresh plugin don't need load again.
@@ -61,6 +62,7 @@ to support multiple platform API for developer. With current technology, you can
 - <kbd>Arrow Down</kbd> - Move from search to TreeView.
 - <kbd>Esc</kbd> - Quick Close Add-in Manager.
 - <kbd>Enter</kbd> - Quick Run Execute a command selected in Add-in Manager.
+
 ## Add-In Manager
 
 ![](pic/AddinManager.png)
@@ -75,14 +77,15 @@ to support multiple platform API for developer. With current technology, you can
 - [x] Show/Hide result inside **Dockpanel Navisworks**.
 - [x] Show Result history inside **Navis Addin Manager**.
 - [x] Clear Result.
-- [X] Show Result by color.
+- [x] Show Result by color.
 
 ![](pic/Trace-Debug.png)
 
 A sample command to execute:
 
 - Way one : use full with Add-in Manager
-``` csharp
+
+```csharp
 [Plugin("HelloWorld", "ChuongMep",DisplayName = "HelloWorld", ToolTip = "HelloWorld Navisworks AddinManager")]
     [AddInPlugin(AddInLocation.AddIn)]
     public class HelloWorld : AddInPlugin
@@ -94,10 +97,12 @@ A sample command to execute:
             return 0;
         }
     }
-   
+
 ```
-- Way two  : use one quick run with Add-in Manager
-``` csharp
+
+- Way two : use one quick run with Add-in Manager
+
+```csharp
     /// <summary>
     /// Only work for in AddinManager
     /// </summary>
@@ -111,7 +116,9 @@ A sample command to execute:
         }
     }
 ```
+
 ---
+
 - Quick Example to Debug or Trace result output :
 
 ```cs
@@ -135,8 +142,7 @@ public class DebugTrace : AddInPlugin
 
 Please follow last release at section [Release](https://github.com/chuongmep/NavisAddInManager/releases/latest)
 
-Support Navisworks Version : 2021, 2022, 2023, 2024, 2025.
----
+## Support Navisworks Version : 2021, 2022, 2023, 2024, 2025, 2026.
 
 ## Guideline
 
@@ -191,7 +197,7 @@ Thanks for providing a free All product IDE for this project
 - Credit to [Nice3point](https://github.com/Nice3point) for the CI/CD template.
 - Website helped me resize icon : [https://resizeappicon.com/](https://resizeappicon.com/)
 
---- 
+---
 
 ## Open Source Recommend
 

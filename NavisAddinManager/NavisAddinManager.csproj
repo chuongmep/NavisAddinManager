@@ -6,8 +6,8 @@
     <ImplicitUsings>true</ImplicitUsings>
     <UseWindowsForms>true</UseWindowsForms>
     <TargetFramework>net48</TargetFramework>
-    <Configurations>Debug N22;Debug N23;Debug N24;Debug N25</Configurations>
-    <Configurations>$(Configurations);Release N21;Release N22;Release N23;Release N24;Release N25</Configurations>
+    <Configurations>Debug N22;Debug N23;Debug N24;Debug N25;Debug N26</Configurations>
+    <Configurations>$(Configurations);Release N21;Release N22;Release N23;Release N24;Release N25;Release N26</Configurations>
     <RootNamespace>NavisAddinManager</RootNamespace>
     <EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
   </PropertyGroup>
@@ -41,6 +41,10 @@
 		<NavisVersion>2025</NavisVersion>
 		<DefineConstants>$(DefineConstants);N25</DefineConstants>
 	</PropertyGroup>
+	<PropertyGroup Condition="$(Configuration.Contains('N26'))">
+		<NavisVersion>2026</NavisVersion>
+		<DefineConstants>$(DefineConstants);N26</DefineConstants>
+	</PropertyGroup>
   <PropertyGroup>
     <Version>$(NavisVersion)</Version>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
@@ -68,10 +72,36 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-  <ItemGroup>
+  <!-- Try to use NuGet packages first (preferred method) -->
+  <ItemGroup Condition="Exists('$(NuGetPackageRoot)chuongmep.navis.api.autodesk.navisworks.api\$(NavisVersion)')">
     <PackageReference Include="Chuongmep.Navis.Api.Autodesk.Navisworks.Api" Version="$(NavisVersion).*" />
     <PackageReference Include="Chuongmep.Navis.Api.AdWindows" Version="$(NavisVersion).*" />
     <PackageReference Include="Chuongmep.Navis.Api.navisworks.gui.roamer" Version="$(NavisVersion).*" />
+  </ItemGroup>
+
+  <!-- Fallback to direct DLL references if NuGet packages don't exist -->
+  <PropertyGroup>
+    <NavisworksInstallPath Condition="'$(NavisworksInstallPath)' == ''">C:\Program Files\Autodesk\Navisworks Manage $(NavisVersion)</NavisworksInstallPath>
+  </PropertyGroup>
+  
+  <ItemGroup Condition="!Exists('$(NuGetPackageRoot)chuongmep.navis.api.autodesk.navisworks.api\$(NavisVersion)') AND Exists('$(NavisworksInstallPath)')">
+    <Reference Include="Autodesk.Navisworks.Api">
+      <HintPath>$(NavisworksInstallPath)\Autodesk.Navisworks.Api.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Autodesk.Navisworks.Interop.ComApi">
+      <HintPath>$(NavisworksInstallPath)\Autodesk.Navisworks.Interop.ComApi.dll</HintPath>
+      <Private>False</Private>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="AdWindows">
+      <HintPath>$(NavisworksInstallPath)\AdWindows.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="navisworks.gui.roamer">
+      <HintPath>$(NavisworksInstallPath)\navisworks.gui.roamer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>
