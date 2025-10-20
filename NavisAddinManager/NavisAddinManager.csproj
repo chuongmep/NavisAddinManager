@@ -145,7 +145,7 @@
     </Page>
   </ItemGroup>
   <PropertyGroup>
-    <PostBuildEvent>powershell -NoProfile -ExecutionPolicy Unrestricted $(SolutionDir)NavisAddinManager\postbuild.ps1 -Configuration '$(Configuration)' -SolutionDir '$(SolutionDir)' -ProjectDir '$(ProjectDir)' -Version '$(NavisVersion)'</PostBuildEvent>
+    <PostBuildEvent>powershell -NoProfile -ExecutionPolicy Unrestricted -File "$(SolutionDir)NavisAddinManager\postbuild.ps1" -Configuration "$(Configuration)" -SolutionDir "$(SolutionDir)" -ProjectDir "$(TargetDir)" -Version "$(NavisVersion)"</PostBuildEvent>
   </PropertyGroup>
 <!--  <Target Name="CopyFiles" AfterTargets="CoreBuild">-->
 <!--    <ItemGroup>-->
