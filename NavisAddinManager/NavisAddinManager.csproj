@@ -6,8 +6,8 @@
     <ImplicitUsings>true</ImplicitUsings>
     <UseWindowsForms>true</UseWindowsForms>
     <TargetFramework>net48</TargetFramework>
-    <Configurations>Debug N22;Debug N23;Debug N24;Debug N25</Configurations>
-    <Configurations>$(Configurations);Release N21;Release N22;Release N23;Release N24;Release N25</Configurations>
+    <Configurations>Debug N22;Debug N23;Debug N24;Debug N25;Debug N26</Configurations>
+    <Configurations>$(Configurations);Release N21;Release N22;Release N23;Release N24;Release N25;Release N26</Configurations>
     <RootNamespace>NavisAddinManager</RootNamespace>
     <EnableUnsafeBinaryFormatterSerialization>true</EnableUnsafeBinaryFormatterSerialization>
   </PropertyGroup>
@@ -42,6 +42,12 @@
 		<DefineConstants>$(DefineConstants);N25</DefineConstants>
 	</PropertyGroup>
   <PropertyGroup>
+  </PropertyGroup>
+    <PropertyGroup Condition="$(Configuration.Contains('N26'))">
+        <NavisVersion>2026</NavisVersion>
+        <DefineConstants>$(DefineConstants);N26</DefineConstants>
+    </PropertyGroup>
+    <PropertyGroup>
     <Version>$(NavisVersion)</Version>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
